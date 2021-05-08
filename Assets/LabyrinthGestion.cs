@@ -6,11 +6,23 @@ public class LabyrinthGestion : MonoBehaviour
 {
     public WallGestion[] walls;
 
+    [SerializeField] ImanBehavior myIman;
+    iman currentPole;
+
+    private void Start()
+    {
+        myIman.myPole = global::iman.POSITIVE;
+        currentPole = global::iman.POSITIVE;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        if (currentPole != myIman.myPole)
         {
+            currentPole = myIman.myPole;
+
             foreach (WallGestion wall in walls)
             {
                 wall.ChangePositioon();

@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlatformRighRoomManager : MonoBehaviour
 {
+    
     [SerializeField] ImanBehavior imanObject;
     public RightRoomPlatform[] platforms;
+    [SerializeField] Transform turretFloor;
+    [SerializeField] TurretEnemy turret;
     iman currentPole;
     bool isActivated = false;
 
@@ -56,6 +60,9 @@ public class PlatformRighRoomManager : MonoBehaviour
 
     public void ActivateRoom()
     {
+        turret.DeactivateTurretAnimation();
+        turretFloor.DOMove( new Vector3(turretFloor.position.x, -100 ,turretFloor.position.z),3).SetEase(Ease.InCubic);
+
         isActivated = true;
 
         ActivatePlatforms();

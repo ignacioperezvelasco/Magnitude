@@ -393,7 +393,7 @@ public class TurretEnemy : MonoBehaviour
     #endregion
 
     #region DEACTIVATE TURRET ANIMATION
-    void DeactivateTurretAnimation()
+    public void DeactivateTurretAnimation()
     {
         //Paramos las particulas
         chargeParticles.SetActive(false);

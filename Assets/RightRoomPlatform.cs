@@ -69,12 +69,12 @@ public class RightRoomPlatform : MonoBehaviour
         {
             active = false;
 
-            this.transform.DOMove(closedPosition, speed);
+            this.transform.DOMove(closedPosition, speed).SetEase(Ease.InOutBack);
         }
         else
         {
             active = true;
-            this.transform.DOMove(initialPosition, speed);           
+            this.transform.DOMove(initialPosition, speed).SetEase(Ease.InOutBack);           
         }
     }
 }

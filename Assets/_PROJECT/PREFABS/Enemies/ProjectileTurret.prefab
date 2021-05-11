@@ -188,7 +188,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 36e7cfc7c3e8671409c7703dfd62a9c5, type: 3}
+  - {fileID: 2100000, guid: c667e150d288e03428a54e5913f5d1bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -360,7 +360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 36e7cfc7c3e8671409c7703dfd62a9c5, type: 3}
+  - {fileID: 2100000, guid: c667e150d288e03428a54e5913f5d1bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -439,7 +439,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 36e7cfc7c3e8671409c7703dfd62a9c5, type: 3}
+  - {fileID: 2100000, guid: c667e150d288e03428a54e5913f5d1bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -725,6 +725,7 @@ MonoBehaviour:
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
   mobility: 4
+  alwaysSamePole: 0
   myPole: 2
   whatCanBeImanted:
     serializedVersion: 2
@@ -734,8 +735,15 @@ MonoBehaviour:
   timerActive: 3
   timeImanted: 8
   timeActive: 3
+  sizeSphereOneCharge: 7
+  sizeSphereTwoCharge: 9
+  sizeSphereThreeCharge: 16
+  numChargesAdded: 0
   imEnemy: 0
   outline: {fileID: 0}
+  explosionForce: 1500
+  explosionVFX: {fileID: 0}
+  myEnemyScript: {fileID: 0}
 --- !u!114 &6720589741141070762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,6 +1081,7 @@ MonoBehaviour:
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
   mobility: 4
+  alwaysSamePole: 0
   myPole: 2
   whatCanBeImanted:
     serializedVersion: 2
@@ -1082,8 +1091,15 @@ MonoBehaviour:
   timerActive: 3
   timeImanted: 8
   timeActive: 3
+  sizeSphereOneCharge: 7
+  sizeSphereTwoCharge: 9
+  sizeSphereThreeCharge: 16
+  numChargesAdded: 0
   imEnemy: 0
   outline: {fileID: 0}
+  explosionForce: 1500
+  explosionVFX: {fileID: 0}
+  myEnemyScript: {fileID: 0}
 --- !u!114 &6720589741573401299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,7 +1504,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 36e7cfc7c3e8671409c7703dfd62a9c5, type: 3}
+  - {fileID: 2100000, guid: c667e150d288e03428a54e5913f5d1bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6438,6 +6454,7 @@ MonoBehaviour:
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
   mobility: 4
+  alwaysSamePole: 0
   myPole: 2
   whatCanBeImanted:
     serializedVersion: 2
@@ -6447,8 +6464,15 @@ MonoBehaviour:
   timerActive: 3
   timeImanted: 8
   timeActive: 3
+  sizeSphereOneCharge: 7
+  sizeSphereTwoCharge: 9
+  sizeSphereThreeCharge: 16
+  numChargesAdded: 0
   imEnemy: 0
   outline: {fileID: 0}
+  explosionForce: 1500
+  explosionVFX: {fileID: 0}
+  myEnemyScript: {fileID: 0}
 --- !u!114 &6720589741889129561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6690,6 +6714,7 @@ MonoBehaviour:
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
   mobility: 4
+  alwaysSamePole: 0
   myPole: 2
   whatCanBeImanted:
     serializedVersion: 2
@@ -6699,8 +6724,15 @@ MonoBehaviour:
   timerActive: 3
   timeImanted: 8
   timeActive: 3
+  sizeSphereOneCharge: 7
+  sizeSphereTwoCharge: 9
+  sizeSphereThreeCharge: 16
+  numChargesAdded: 0
   imEnemy: 0
   outline: {fileID: 0}
+  explosionForce: 1500
+  explosionVFX: {fileID: 0}
+  myEnemyScript: {fileID: 0}
 --- !u!114 &6720589742093566071
 MonoBehaviour:
   m_ObjectHideFlags: 0

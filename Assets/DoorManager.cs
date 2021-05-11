@@ -9,7 +9,8 @@ public class DoorManager : MonoBehaviour
     enum DoorType
     {
         NORMAL,
-        SLIDER
+        SLIDER,
+        AUTOMATIC
     };
 
     [SerializeField] DoorType doorType;
@@ -30,6 +31,8 @@ public class DoorManager : MonoBehaviour
 
     bool isMoving = false;
     bool opened = false;
+
+    public bool automaticActivated = true;
     
 
     
@@ -110,6 +113,16 @@ public class DoorManager : MonoBehaviour
                         Invoke("StopMoving", speedAnimation);
                         break;
                     }
+                case DoorType.AUTOMATIC:
+                    {
+
+                        rightPivot.DORotate(new Vector3(0, angleToOpen, 0), speedAnimation).SetEase(Ease.OutBounce);
+
+                        leftPivot.DORotate(new Vector3(0, -angleToOpen, 0), speedAnimation).SetEase(Ease.OutBounce);
+
+                        Invoke("StopMoving", speedAnimation);
+                        break;
+                    }
                 default:
                     {
                         break;
@@ -141,5 +154,21 @@ public class DoorManager : MonoBehaviour
     void StopMoving()
     {
         isMoving = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && automaticActivated)
+        {
+            OpenDoor();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") && automaticActivated)
+        {
+            CloseDoor();
+        }
     }
 }

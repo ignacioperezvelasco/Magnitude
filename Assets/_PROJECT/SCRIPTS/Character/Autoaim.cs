@@ -57,8 +57,7 @@ public class Autoaim : MonoBehaviour
                 }
                 //Miramos si el siguiente target de la lista está más cerca que el actual target
                 else if (ditanceToNewTarget < Vector3.Distance(player.position, currentTarget.go.transform.position))
-                {
-                    
+                {                                   
 
                     UpdateNewTarget(posiblesTargets[i]);
                 }
@@ -100,6 +99,7 @@ public class Autoaim : MonoBehaviour
         if (other.CompareTag("CanBeHitted"))
         {
             ErasePosibleTarget(other.gameObject);
+            Debug.Log("Exit obj");
         }
     }
     #endregion

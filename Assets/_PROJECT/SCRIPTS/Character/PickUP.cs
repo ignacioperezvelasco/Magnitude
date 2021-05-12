@@ -28,14 +28,14 @@ public class PickUP : MonoBehaviour
                 {
                     isGrabed = false;
                    // pickedCollider.enabled = false;
-                    collider.enabled = true;
+                    collider.isTrigger = false;
                     objectRb.isKinematic = false;
                     objectTransform.parent = null;
                 }
                 else
                 {
                     isGrabed = true;
-                    collider.enabled = false;
+                    collider.isTrigger = true;
                     objectRb.isKinematic = true;
                    // pickedCollider.enabled = true;
                     objectTransform.parent = this.transform;

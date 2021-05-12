@@ -12,8 +12,12 @@ public class ShootingScript : MonoBehaviour
     [SerializeField] Animator myAnimator;
     public float damage = 10f;
     public float bulletSpeed = 100;
-    public Rigidbody bullet;
-    public Rigidbody crystal;
+    public Rigidbody Negativecharge;
+    public Rigidbody PositiveCharge;
+
+    public Rigidbody negativeNormal;
+    public Rigidbody positiveNormal;
+
     public Transform rightPistol;
     public Transform leftPistol;
     bool canShootPositive = true;
@@ -254,7 +258,6 @@ public class ShootingScript : MonoBehaviour
             positivePS.SetActive(false);
             //Seteamos animator
             myAnimator.SetBool("shootLeft", true);
-            Debug.Log("dedede "+myAnimator.GetBool("ShotLeft"));
         }
         else if (shotButtonUp)
         {
@@ -264,8 +267,21 @@ public class ShootingScript : MonoBehaviour
     //Shoot-
     void ShootNegative()
     {
+        Rigidbody bulletClone;
+        Debug.Log(negativeCharge);
+        if (negativeCharge > 1f)
+            bulletClone = (Rigidbody)Instantiate(Negativecharge, rightPistol.transform.position, rightPistol.transform.rotation);
+        else
+            bulletClone = (Rigidbody)Instantiate(negativeNormal, rightPistol.transform.position, rightPistol.transform.rotation);
 
-        Rigidbody bulletClone = (Rigidbody)Instantiate(bullet, rightPistol.transform.position, rightPistol.transform.rotation);
+
+        if (negativeCharge > 2.9f)
+            bulletClone.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        else if (negativeCharge > 2f)
+            bulletClone.transform.localScale = new Vector3(1f, 1f, 1f);
+        else if (negativeCharge > 1f)
+            bulletClone.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
         bulletClone.gameObject.GetComponent<BulletScript>().SetPole(iman.NEGATIVE);
         //Debug.Log("Negative");
         bulletClone.gameObject.GetComponent<BulletScript>().SetCharge((int)negativeCharge);
@@ -289,7 +305,23 @@ public class ShootingScript : MonoBehaviour
     //Shoot+
     void ShootPositive()
     {
-        Rigidbody bulletClone = (Rigidbody)Instantiate(crystal, leftPistol.transform.position, leftPistol.transform.rotation);
+        Rigidbody bulletClone;
+        if (positiveCharge > 1f)
+        {
+            bulletClone = (Rigidbody)Instantiate(PositiveCharge, leftPistol.transform.position, leftPistol.transform.rotation);           
+        }
+        else
+            bulletClone = (Rigidbody)Instantiate(positiveNormal, leftPistol.transform.position, leftPistol.transform.rotation);
+
+        
+        if (positiveCharge > 2.9f)
+            bulletClone.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        else if (positiveCharge > 2f)
+            bulletClone.transform.localScale = new Vector3(1f, 1f, 1f);
+        else if(positiveCharge > 1f)
+            bulletClone.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        
+
         bulletClone.gameObject.GetComponent<BulletScript>().SetPole(iman.POSITIVE);
         //Debug.Log("Positive");
         bulletClone.gameObject.GetComponent<BulletScript>().SetCharge((int)positiveCharge);

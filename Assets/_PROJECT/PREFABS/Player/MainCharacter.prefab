@@ -5793,11 +5793,15 @@ MonoBehaviour:
   myPlayerLogic: {fileID: 4265349373781901275}
   myAnimator: {fileID: 1896731843569135253}
   damage: 10
-  bulletSpeed: 35
-  Negativecharge: {fileID: 0}
-  PositiveCharge: {fileID: 0}
-  negativeNormal: {fileID: 0}
-  positiveNormal: {fileID: 0}
+  bulletSpeed: 15
+  Negativecharge: {fileID: 6096528498339846667, guid: b7c935c248e673d49b81bec311b263e5,
+    type: 3}
+  PositiveCharge: {fileID: 6096528498339846667, guid: 4122e87882452b44f89d2005c9b3adc3,
+    type: 3}
+  negativeNormal: {fileID: 6096528498339846667, guid: a6e2189a8ba30ca428eb7c5aabd5c334,
+    type: 3}
+  positiveNormal: {fileID: 6096528498339846667, guid: 37d35775d4cd3fb4796e0b7894c9dca4,
+    type: 3}
   rightPistol: {fileID: 421653869930938809}
   leftPistol: {fileID: 3848867583641425146}
   cooldown1: 0.5
@@ -5893,7 +5897,7 @@ MonoBehaviour:
   canBeDamaged: 1
   timeInvencible: 1.5
   characterAnimator: {fileID: 1896731843569135253}
-  oneHand: 1
+  oneHand: 0
   myMovementScript: {fileID: 5420115300347966286}
 --- !u!136 &1775972254763464372
 CapsuleCollider:
@@ -6386,6 +6390,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: -2933139716659438605, guid: 52bba20aa696ec84986a15f56025afb6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31a42ce0a4984d1418f62f8b38c61e71, type: 2}
     - target: {fileID: 919132149155446097, guid: 52bba20aa696ec84986a15f56025afb6,
         type: 3}
       propertyPath: m_Name

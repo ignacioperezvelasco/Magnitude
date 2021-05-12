@@ -98,9 +98,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6096528498339846669}
     m_Modifications:
+    - target: {fileID: 1245224536246384, guid: a8871182bee35624f920aaf44b509541, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409903271756654, guid: a8871182bee35624f920aaf44b509541, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1595252117517162, guid: a8871182bee35624f920aaf44b509541, type: 3}
       propertyPath: m_Name
       value: NegativoCargado
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809088009161248, guid: a8871182bee35624f920aaf44b509541, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4623055400575438, guid: a8871182bee35624f920aaf44b509541, type: 3}
       propertyPath: m_LocalPosition.x

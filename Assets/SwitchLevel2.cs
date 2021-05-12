@@ -14,6 +14,11 @@ public class SwitchLevel2 : MonoBehaviour
     [SerializeField] RoomCentreManager centerManager;
     [SerializeField] SwitchType type;
 
+
+    [Header("CAMERAS TRANSITION")]
+    [SerializeField] GameObject toDeactivate;
+    [SerializeField] GameObject toActivate;
+
     bool isPlayerInside = false;
     bool isActivated = false;
 
@@ -25,6 +30,11 @@ public class SwitchLevel2 : MonoBehaviour
             isActivated = true;
 
             centerManager.ActivateSwitch((int)type);
+            if (type == SwitchType.RIGHT)
+            {
+                toDeactivate.SetActive(false);
+                toActivate.SetActive(true);
+            }
         }
     }
 

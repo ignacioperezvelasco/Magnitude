@@ -220,7 +220,7 @@ public class ImanBehavior : MonoBehaviour
             {
                 rb.velocity = Vector3.zero;
                 if(rb.gameObject.tag=="Player")
-                    rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),1, ForceMode.Force);
+                    rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),0.2f, ForceMode.Force);
                 else
                     rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),0,ForceMode.Force);
                 if(myPole==iman.POSITIVE)

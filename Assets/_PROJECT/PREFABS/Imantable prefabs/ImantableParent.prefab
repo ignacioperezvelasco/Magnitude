@@ -9643,22 +9643,22 @@ PrefabInstance:
     - target: {fileID: 609703410532210516, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.3411951
+      value: 1.1919191
       objectReference: {fileID: 0}
     - target: {fileID: 609703410532210516, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.04443693
+      value: -0.0012125969
       objectReference: {fileID: 0}
     - target: {fileID: 609703410532210516, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}
       propertyPath: m_Size.z
-      value: 1.2682123
+      value: 1.2548966
       objectReference: {fileID: 0}
     - target: {fileID: 609703410532210516, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.011109829
+      value: 0.017767668
       objectReference: {fileID: 0}
     - target: {fileID: 609703410532210516, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}

@@ -10,6 +10,7 @@ public class PenduloManager : MonoBehaviour
     [SerializeField] float speedInitialMove;
     [SerializeField] float angleToRotate;
     [SerializeField] float speedBridgeFalling;
+    [SerializeField] float speedPenduloFalling;
     bool moving = false;
     bool isImanted = false;
     
@@ -54,6 +55,13 @@ public class PenduloManager : MonoBehaviour
         if (penduloIman.GetCharges() == 3)
         {
             bridge.DORotate(new Vector3(0, 0, 0), speedBridgeFalling).SetEase(Ease.OutBounce);
+
+            Invoke("BreakPendulo", speedPenduloFalling);
         }
+    }
+
+    void BreakPendulo()
+    {
+        this.transform.DOMove(new Vector3(this.transform.position.x, -100, this.transform.position.z), speedBridgeFalling*2);
     }
 }

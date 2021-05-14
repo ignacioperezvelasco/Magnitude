@@ -194,18 +194,21 @@ public class ImanBehavior : MonoBehaviour
     {
         if (collision.collider.tag == "CanBeHitted")
         {
-            if (collision.collider.GetComponent<ImanBehavior>().myPole != iman.NONE)
+            if ((mobility != mobilityType.JUSTPOLE) && (collision.collider.GetComponent<ImanBehavior>().mobility != mobilityType.JUSTPOLE))
             {
-                if (!imEnemy)
-                    timerActive = 0;
-                if (myPole == iman.POSITIVE)
+                if ((collision.collider.GetComponent<ImanBehavior>().myPole != iman.NONE))
                 {
-                    hasToExplote = true;
-                    midlePoint = (collision.collider.transform.position + this.transform.position) / 2;
+                    if (!imEnemy)
+                        timerActive = 0;
+                    if (myPole == iman.POSITIVE)
+                    {
+                        hasToExplote = true;
+                        midlePoint = (collision.collider.transform.position + this.transform.position) / 2;
+                    }
+                    otherCharges = collision.collider.GetComponent<ImanBehavior>().GetCharges();
+                    if (imEnemy)
+                        Explode();
                 }
-                otherCharges = collision.collider.GetComponent<ImanBehavior>().GetCharges();
-                if (imEnemy)
-                    Explode();
             }
         }
     }
@@ -220,7 +223,7 @@ public class ImanBehavior : MonoBehaviour
             {
                 rb.velocity = Vector3.zero;
                 if(rb.gameObject.tag=="Player")
-                    rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),1, ForceMode.Force);
+                    rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),0.2f, ForceMode.Force);
                 else
                     rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),0,ForceMode.Force);
                 if(myPole==iman.POSITIVE)

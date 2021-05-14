@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-
+    
     #region UPDATE
     private void Update()
     {

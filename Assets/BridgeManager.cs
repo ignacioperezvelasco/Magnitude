@@ -29,4 +29,8 @@ public class BridgeManager : MonoBehaviour
         }
 
     }
+    public void UnPressButton()
+    {
+        numButtonsPressed--;
+    }
 }

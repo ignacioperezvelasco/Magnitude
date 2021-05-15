@@ -20,22 +20,30 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        if (PlayerPrefs.GetInt("CHECKPOINT") == 0)
+        switch (PlayerPrefs.GetInt("CHECKPOINT"))
         {
-            player.transform.position = initialCheckpoint.transform.position;
+            case 0:
+                player.transform.position = initialCheckpoint.transform.position;
+                break;
+            case 1:
+                player.transform.position = checkPoint_1.transform.position;
+                break;
+            case 2:
+                player.transform.position = checkPoint_2.transform.position;
+                break;
+            case 3:
+                player.transform.position = checkPoint_3.transform.position;
+                break;
+            case 4:
+                player.transform.position = checkPoint_4.transform.position;    
+                break;
+            case 5:
+                player.transform.position = initialCheckpoint.transform.position;
+                break;
+            default:
+                break;
         }
-        else if(PlayerPrefs.GetInt("CHECKPOINT") == 5)
-        {
-            player.transform.position = initialCheckpoint.transform.position;
-        }
-        else
-        {
-            Vector3 newPosition = new Vector3(PlayerPrefs.GetFloat("POS_X"),
-                                                PlayerPrefs.GetFloat("POS_Y"),
-                                                PlayerPrefs.GetFloat("POS_Z"));
-
-            player.transform.position = newPosition;
-        }
+        
     }
     #endregion
     

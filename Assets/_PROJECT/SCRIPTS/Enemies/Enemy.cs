@@ -25,7 +25,7 @@ public class Enemy : Agent
     public LayerMask Ground;
     public Transform _groundChecker;
     public bool _isGrounded=false;
-    private float GroundDistance = 0.2f;
+    private float GroundDistance = 0.5f;
 
     PlayerLogic playerLogic;
 

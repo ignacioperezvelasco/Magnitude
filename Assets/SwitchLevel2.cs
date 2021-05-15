@@ -24,6 +24,7 @@ public class SwitchLevel2 : MonoBehaviour
     [SerializeField] GameObject leftLight;
     [SerializeField] GameObject downLight;
 
+    [SerializeField] GameObject elevatorLight;
 
     [Header("CINEMATIC CAMERAS")]
     [SerializeField] Animator fadeAnimator;
@@ -68,6 +69,20 @@ public class SwitchLevel2 : MonoBehaviour
                 Invoke("ActivateLight", 3f);
 
             }
+            else if (type == SwitchType.LEFT)
+            {
+                player.StopMovement();
+
+                this.transform.DOMove(new Vector3(this.transform.position.x - 1,
+                                                    this.transform.position.y,
+                                                    this.transform.position.z ), 0.75f).SetEase(Ease.InOutBack);
+
+                ActivateFade();
+
+                Invoke("ActivateCameraDoor", 1.25f);
+                Invoke("ActivateLight", 3f);
+            }
+
         }
     }
 
@@ -111,6 +126,12 @@ public class SwitchLevel2 : MonoBehaviour
             Invoke("ActivateFade", 3.5f);
             Invoke("ActivateCameraLeftRoom", 4.5f);
         }
+        else if (type == SwitchType.LEFT)
+        {
+
+            Invoke("ActivateFade", 3);
+            Invoke("ActivateCameraElevator", 4f);
+        }
     }
 
     void DeactivateCameraDoor()
@@ -130,8 +151,31 @@ public class SwitchLevel2 : MonoBehaviour
     void DeactivateCameraLeftRoom()
 
     {
-        leftRoomCamera.SetActive(false
-);
+        leftRoomCamera.SetActive(false);
+        player.ResumeMovement();
+    }
+
+    void ActivateCameraElevator()
+    {
+        DeactivateCameraDoor();
+        elevatorCamera.SetActive(true);
+
+        Invoke("ActivateElevatorLight", 1.5f);
+        Invoke("ActivateFade", 2.5f);
+        Invoke("DeactivateCameraElevator", 4f);
+
+
+    }
+
+    void DeactivateCameraElevator()
+    {
+        elevatorCamera.SetActive(false);
+        player.ResumeMovement();
+    }
+
+    void ActivateElevatorLight()
+    {
+        elevatorLight.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)

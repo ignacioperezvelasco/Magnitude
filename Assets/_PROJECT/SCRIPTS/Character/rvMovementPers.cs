@@ -7,7 +7,7 @@ public class rvMovementPers : MonoBehaviour
 {
     //movement
     public bool dead = false;
-    [Header("movement")]
+    [Header("MOVEMENT")]
     [SerializeField] Vector3 myGravity = new Vector3(0, -15, 0);
     public Rigidbody myRb;
     public float speed=2;
@@ -42,11 +42,13 @@ public class rvMovementPers : MonoBehaviour
     [SerializeField] float timeToNextDash=2;
     bool canDash = true;
     float dashCounter;
+
     //other
-    [Header("other")]
+    [Header("OTHER")]
     private int currentHealth = 100;
     private int maxHealth = 100;
     bool onLiquidSlower = false;
+    public GameObject shadow;
 
 
     bool isStoped = false;
@@ -54,6 +56,7 @@ public class rvMovementPers : MonoBehaviour
 
     private void Start()
     {
+
         dashCounter = timeToNextDash;
         currentHealth = maxHealth;
         myPlayer = GameObject.FindGameObjectWithTag("Player");
@@ -86,8 +89,14 @@ public class rvMovementPers : MonoBehaviour
 
             float angle = Vector3.Angle(desiredVelocity, myRb.velocity.normalized);
 
+            if (shadow.activeInHierarchy != true)
+               if(_isGrounded)
+                        shadow.SetActive(true);
+
             if (!_isGrounded)
             {
+                if(shadow.activeInHierarchy!=false)
+                    shadow.SetActive(false);
                 desiredVelocity *= airControl;
                 Vector3 aux = new Vector3(myRb.velocity.x, 0, myRb.velocity.z);
                 if ((angle < 80) && (aux.magnitude > maxSpeed))
@@ -210,6 +219,13 @@ public class rvMovementPers : MonoBehaviour
         isStoped = true;
 
         lookAt.Stop();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (isDashing)
+            isDashing = false;
+
     }
 
     public void ResumeMovement()

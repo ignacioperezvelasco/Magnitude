@@ -68,7 +68,7 @@ public class LookAt : MonoBehaviour
                 if (currentTarget != new Vector3(1000, 1000, 1000))
                 {
 
-                    currentTarget.y = this.transform.position.y;
+                    //currentTarget.y = this.transform.position.y;
                     hasTarget = true;
                 }
                 else
@@ -142,7 +142,7 @@ public class LookAt : MonoBehaviour
     {
         Vector3 targetDirection;        
 
-        targetDirection = autoaim.GetCurrentTarget() - this.transform.position;
+        targetDirection = autoaim.GetCurrentTarget() - initialNegativeLaser.position;
        // targetDirection.y = 0;        
         targetDirection = targetDirection.normalized;
 

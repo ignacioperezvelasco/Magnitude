@@ -62,7 +62,7 @@ public class Enemy : Agent
     [Header("ATTACK")]
     [SerializeField] float timeBetweenAttacks = 3;
     [SerializeField] float distanceToDoAreaAtttack = 3;
-    [SerializeField] float forceExplosion = 10000;
+    [SerializeField] float forceExplosion = 1000;
     [SerializeField] MeshRenderer attackArea;
     [SerializeField] AreaAttack areaAttackLogic;
     [SerializeField] AreaAttack rangeAttackLogic;

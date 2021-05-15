@@ -35,6 +35,9 @@ public class Elevator : MonoBehaviour
         {
             weight = other.gameObject;
             weight.transform.SetParent(this.transform);
+            weight.GetComponent<Rigidbody>().isKinematic = false;
+
+            other.isTrigger = false;
 
             //elevator
             elevator.DOMove(elevatorUp.position, speed);

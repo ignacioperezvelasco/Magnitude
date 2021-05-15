@@ -220,8 +220,9 @@ public class ImantablePlatform : MonoBehaviour
         }
         else if (other.CompareTag("CanBeHitted") && type == PlatformType.PLATFORM)
         {
-            other.gameObject.transform.SetParent(platformTransform);
+           // other.gameObject.transform.SetParent(platformTransform);
         }
+
 
         if (type == PlatformType.RAIL && other.gameObject.layer == LayerMask.NameToLayer("Enemy") && !hitted && state == PlatformState.MOVING)
         {            
@@ -231,6 +232,17 @@ public class ImantablePlatform : MonoBehaviour
         }
     }
     #endregion
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.CompareTag("CanBeHitted") && type == PlatformType.PLATFORM)
+        {
+            if(other.transform.parent==null)
+                other.gameObject.transform.SetParent(platformTransform);
+        }
+
+    }
+
 
     #region TRIGGER EXIT
     private void OnTriggerExit(Collider other)

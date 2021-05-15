@@ -82,6 +82,19 @@ public class SwitchLevel2 : MonoBehaviour
                 Invoke("ActivateCameraDoor", 1.25f);
                 Invoke("ActivateLight", 3f);
             }
+            else if (type == SwitchType.DOWN)
+            {
+                player.StopMovement();
+
+                this.transform.DOMove(new Vector3(this.transform.position.x - 1,
+                                                    this.transform.position.y,
+                                                    this.transform.position.z), 0.75f).SetEase(Ease.InOutBack);
+
+                ActivateFade();
+
+                Invoke("ActivateCameraDoor", 1.25f);
+                Invoke("ActivateLight", 3f);
+            }
 
         }
     }
@@ -132,11 +145,21 @@ public class SwitchLevel2 : MonoBehaviour
             Invoke("ActivateFade", 3);
             Invoke("ActivateCameraElevator", 4f);
         }
+        else if (type == SwitchType.DOWN)
+        {
+            Invoke("ActivateFade", 3.5f);
+            Invoke("DeactivateCameraDoor", 4.5f);
+        }
     }
 
     void DeactivateCameraDoor()
     {
         doorCamera.SetActive(false);
+
+        if (type == SwitchType.DOWN)
+        {
+            player.ResumeMovement();
+        }
     }
 
     void ActivateCameraLeftRoom()
@@ -149,7 +172,6 @@ public class SwitchLevel2 : MonoBehaviour
     }
 
     void DeactivateCameraLeftRoom()
-
     {
         leftRoomCamera.SetActive(false);
         player.ResumeMovement();

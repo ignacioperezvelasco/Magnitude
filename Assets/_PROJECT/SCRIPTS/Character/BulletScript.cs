@@ -92,6 +92,8 @@ public class BulletScript : MonoBehaviour
             collision.gameObject.GetComponent<ImanBehavior>().AddCharge(myPole, numCharge, myRB);
             Die();
         }
+        else
+            Die();
     }
 
     public void SetPole(iman pole)

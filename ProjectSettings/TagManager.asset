@@ -8,6 +8,7 @@ TagManager:
   - CanBeHitted
   - Enemy
   - Boss
+  - AimingObject
   layers:
   - Default
   - TransparentFX

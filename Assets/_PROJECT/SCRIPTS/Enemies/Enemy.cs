@@ -127,12 +127,6 @@ public class Enemy : Agent
     #region UPDATE
     void Update()
     {
-        _isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
-
-        //HandleKinematic
-        HandleGround(_isGrounded);
-
-        //Comprobamos si está muerto
         if (life <= 0 && !isDead)
         {
             //Ponemos que esta muerto
@@ -145,28 +139,39 @@ public class Enemy : Agent
             //Ponemos la animación de morir
             animator.DeathAnimation();
         }
-        
-        if (!isDead)
+        else
         {
-            //Actualizamos la barra de vide
-            //healthBar.fillAmount = life / startingLife;
-            //healthTransform.transform.LookAt(Camera.main.transform);
+            _isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
 
-            //Controlamos si debe haber cambio de estado
-            CheckState();
+            //HandleKinematic
+            HandleGround(_isGrounded);
 
-            //Controlamos el estado actual
-            StateBehaviour();
+            //Comprobamos si está muerto
+
+
+            if (!isDead)
+            {
+                //Actualizamos la barra de vide
+                //healthBar.fillAmount = life / startingLife;
+                //healthTransform.transform.LookAt(Camera.main.transform);
+
+                //Controlamos si debe haber cambio de estado
+                CheckState();
+
+                //Controlamos el estado actual
+                StateBehaviour();
+            }
+
+            //CheckGOHittedme
+            if (!myImanBehaviorScript.GetApplyForce() && (gameObjectsHittedMe != null))
+            {
+                gameObjectsHittedMe.Clear();
+            }
+
+            //ShaderHandle
+            HandleShader();
         }
-
-        //CheckGOHittedme
-        if (!myImanBehaviorScript.GetApplyForce() && (gameObjectsHittedMe != null))
-        {
-            gameObjectsHittedMe.Clear();
-        }
-
-        //ShaderHandle
-        HandleShader();
+       
     }
     #endregion
 
@@ -552,6 +557,7 @@ public class Enemy : Agent
     public void GetDamage(float damage)
     {
         life -= (int)damage;
+        Debug.Log("Vida: " + life);
     }
 
     #endregion

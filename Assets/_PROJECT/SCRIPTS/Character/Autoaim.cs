@@ -88,7 +88,13 @@ public class Autoaim : MonoBehaviour
         if (other.CompareTag("CanBeHitted"))
         {
             if (!other.gameObject.GetComponent<ImanBehavior>().alwaysSamePole)
-                AddNewPosibleTarget(other.gameObject);
+            {
+                if(other.gameObject.GetComponent<ImanBehavior>().imEnemy)
+                    AddNewPosibleTarget(other.gameObject.GetComponent<ImanBehavior>().aimHere.gameObject);
+                else
+                    AddNewPosibleTarget(other.gameObject);
+
+            }
         }
     }
     #endregion
@@ -96,10 +102,12 @@ public class Autoaim : MonoBehaviour
     #region TRIGGER EXIT
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("CanBeHitted"))
+        if (other.CompareTag("CanBeHitted") )
         {
-            ErasePosibleTarget(other.gameObject);
-            Debug.Log("Exit obj");
+            if (!other.GetComponent<ImanBehavior>().imEnemy)
+                ErasePosibleTarget(other.gameObject);
+            else
+                ErasePosibleTarget(other.GetComponent<ImanBehavior>().aimHere.gameObject);
         }
     }
     #endregion

@@ -14,6 +14,7 @@ public class ImanBehavior : MonoBehaviour
 
     [Header("CHECKING CHARGES")]
     [SerializeField] SphereCollider mysphereCollider;
+    public Transform aimHere;
     [Header("ELEMENT TYPE")]
     public mobilityType mobility = mobilityType.NONE;
     public bool alwaysSamePole=false;
@@ -21,6 +22,7 @@ public class ImanBehavior : MonoBehaviour
     public LayerMask whatCanBeImanted;
     private Rigidbody myRB;
     public bool creaCarga = true;
+    
 
     [Header("FORCES")]
     [SerializeField] float force = 15;
@@ -208,6 +210,7 @@ public class ImanBehavior : MonoBehaviour
                     {
                         hasToExplote = true;
                         midlePoint = (collision.collider.transform.position + this.transform.position) / 2;
+                        Debug.Log("HA entrado explsion");
                     }
                     otherCharges = collision.collider.GetComponent<ImanBehavior>().GetCharges();
                     if (imEnemy)
@@ -225,12 +228,10 @@ public class ImanBehavior : MonoBehaviour
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.velocity = Vector3.zero;
-                if(rb.gameObject.tag=="Player")
-                    rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),0.2f, ForceMode.Force);
-                else
-                    rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),0,ForceMode.Force);
-                if(myPole==iman.POSITIVE)
+                
+                rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),1,ForceMode.Force);
+
+                if (myPole==iman.POSITIVE)
                     Instantiate(explosionVFX, midlePoint, Quaternion.identity);
             }
         }

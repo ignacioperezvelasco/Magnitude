@@ -730,7 +730,9 @@ MonoBehaviour:
   whatCanBeImanted:
     serializedVersion: 2
     m_Bits: 0
+  creaCarga: 0
   force: 3
+  forceBase: 25
   timerImanted: 8
   timerActive: 3
   timeImanted: 8
@@ -1086,7 +1088,9 @@ MonoBehaviour:
   whatCanBeImanted:
     serializedVersion: 2
     m_Bits: 0
+  creaCarga: 0
   force: 3
+  forceBase: 25
   timerImanted: 8
   timerActive: 3
   timeImanted: 8
@@ -6459,7 +6463,9 @@ MonoBehaviour:
   whatCanBeImanted:
     serializedVersion: 2
     m_Bits: 0
+  creaCarga: 0
   force: 3
+  forceBase: 25
   timerImanted: 8
   timerActive: 3
   timeImanted: 8
@@ -6719,7 +6725,9 @@ MonoBehaviour:
   whatCanBeImanted:
     serializedVersion: 2
     m_Bits: 0
+  creaCarga: 0
   force: 3
+  forceBase: 25
   timerImanted: 8
   timerActive: 3
   timeImanted: 8

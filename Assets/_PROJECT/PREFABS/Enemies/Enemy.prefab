@@ -9533,7 +9533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5163394427513343027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -83.9, y: 3.83, z: -15.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5163394426888203257}
@@ -9558,6 +9558,36 @@ MonoBehaviour:
   myIB: {fileID: 231614512086542704}
   ParticleSystemPositive: {fileID: 5163394426888203258}
   ParticleSystemNegative: {fileID: 5163394425805936630}
+--- !u!1 &8566814453762104353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8310216099680769100}
+  m_Layer: 10
+  m_Name: AimThisPoint
+  m_TagString: AimingObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8310216099680769100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566814453762104353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8820225508135538108}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5197849277414881772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9646,12 +9676,12 @@ PrefabInstance:
     - target: {fileID: 3622517249532212304, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3622517249532212304, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3622517249532212304, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
@@ -9727,7 +9757,7 @@ PrefabInstance:
     - target: {fileID: 3622517249532212305, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: forceExplosion
-      value: 3000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3622517249532212307, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
@@ -9784,13 +9814,23 @@ PrefabInstance:
     - target: {fileID: 5410129694641868956, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: explosionForce
-      value: 1500
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5410129694641868956, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: outline
       value: 
       objectReference: {fileID: 1404029036903797069}
+    - target: {fileID: 5410129694641868956, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: forceBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410129694641868956, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: aimHere
+      value: 
+      objectReference: {fileID: 8310216099680769100}
     - target: {fileID: 5560948044664891373, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

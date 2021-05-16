@@ -9558,6 +9558,20 @@ MonoBehaviour:
   myIB: {fileID: 5755061400945115348}
   ParticleSystemPositive: {fileID: 5163394426888203258}
   ParticleSystemNegative: {fileID: 5163394425805936630}
+--- !u!136 &3016491626505783618
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755061400945115349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.3000753
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.023770452, z: 0}
 --- !u!1001 &5163394426402805635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9673,7 +9687,7 @@ PrefabInstance:
     - target: {fileID: 609703410532210516, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 609703410532210518, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}
@@ -9706,6 +9720,11 @@ PrefabInstance:
       propertyPath: forceBase
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 609703410532210519, guid: 73b9ff86893cf5247b7098f444678fa2,
+        type: 3}
+      propertyPath: explosionForce
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 609703410572927237, guid: 73b9ff86893cf5247b7098f444678fa2,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -9733,6 +9752,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b9ff86893cf5247b7098f444678fa2, type: 3}
+--- !u!1 &5755061400945115349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 609703410532210518, guid: 73b9ff86893cf5247b7098f444678fa2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5163394426402805635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5755061400945115344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 609703410532210515, guid: 73b9ff86893cf5247b7098f444678fa2,
@@ -9745,7 +9770,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5163394426402805635}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5755061400945115349}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bdce265bd5d54749a9dc4a20bc5c0a6, type: 3}

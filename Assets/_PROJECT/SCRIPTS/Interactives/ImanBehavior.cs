@@ -20,9 +20,11 @@ public class ImanBehavior : MonoBehaviour
     public iman myPole = iman.NONE;
     public LayerMask whatCanBeImanted;
     private Rigidbody myRB;
+    public bool creaCarga = true;
 
     [Header("FORCES")]
-    [SerializeField] float force = 3;
+    [SerializeField] float force = 15;
+    [SerializeField] float forceBase = 25;
     [SerializeField] float timerImanted = 8f;
     [SerializeField] float timerActive = 3f;
     [SerializeField] float timeImanted = 8f;
@@ -151,7 +153,8 @@ public class ImanBehavior : MonoBehaviour
                     if ((other.gameObject.layer == 9) && (other.gameObject.transform.parent.GetComponent<ImanBehavior>().myPole!=iman.NONE))
                         if (!nearImantableObjects.Contains(other.gameObject.transform.parent.gameObject))
                         {
-                            nearImantableObjects.Add(other.gameObject.transform.parent.gameObject);
+                            if (other.gameObject.transform.parent.GetComponent<ImanBehavior>().creaCarga)
+                                    nearImantableObjects.Add(other.gameObject.transform.parent.gameObject);
                         }
                 }
             }
@@ -169,7 +172,8 @@ public class ImanBehavior : MonoBehaviour
                     if ((other.gameObject.layer == 9) && (other.gameObject.transform.parent.GetComponent<ImanBehavior>().myPole != iman.NONE))
                         if (!nearImantableObjects.Contains(other.gameObject.transform.parent.gameObject))
                         {
-                            nearImantableObjects.Add(other.gameObject.transform.parent.gameObject);
+                            if (other.gameObject.transform.parent.GetComponent<ImanBehavior>().creaCarga)
+                                    nearImantableObjects.Add(other.gameObject.transform.parent.gameObject);
                         }
                 }
             }
@@ -240,7 +244,6 @@ public class ImanBehavior : MonoBehaviour
     }
     #endregion
 
-
     #region calculate Forces
 
     void CalculateDirectionForce()
@@ -248,7 +251,6 @@ public class ImanBehavior : MonoBehaviour
         bool hay = false;
         foreach (GameObject obj in nearImantableObjects)
         {
-
             //comprobamos q se tenga q calcular
             if (obj.GetComponent<ImanBehavior>().myPole != iman.NONE)
             {
@@ -295,9 +297,11 @@ public class ImanBehavior : MonoBehaviour
             default:
                 break;
         }
-        float invertedDistance = (1f / finalForce.magnitude );
+        float invertedDistance = (1f / finalForce.magnitude);
 
-        finalForce = finalForce.normalized * invertedDistance * numChargesSum * force;
+        float factor = ((invertedDistance * numChargesSum * force) - 8.5f) / 25.5f;
+
+        finalForce = finalForce.normalized * (forceBase + (forceBase * factor));
         //Debug.Log(finalForce);
 
         return finalForce;

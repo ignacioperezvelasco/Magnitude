@@ -9572,6 +9572,19 @@ CapsuleCollider:
   m_Height: 1.3000753
   m_Direction: 1
   m_Center: {x: 0, y: -0.023770452, z: 0}
+--- !u!65 &4012296654142205970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755061400945115349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7977751, y: 0.07780194, z: 0.76558113}
+  m_Center: {x: -0.013354152, y: -0.64, z: 0.013009131}
 --- !u!1001 &5163394426402805635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9750,7 +9763,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 609703410532210516, guid: 73b9ff86893cf5247b7098f444678fa2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 73b9ff86893cf5247b7098f444678fa2, type: 3}
 --- !u!1 &5755061400945115349 stripped
 GameObject:

@@ -33,18 +33,15 @@ public class CinematicCamera : MonoBehaviour
         mainCamera = Camera.main.transform;
     }
     #endregion
-
-
+    
     #region TRIGGER ENTER
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isActivated)
         {
 
-            //Paramos el movimiento del player
-            player.StopMovement();
 
-            Invoke("StartCinematic", 1.5f);          
+            Invoke("StartCinematic", 2f);          
 
         }
     }
@@ -53,7 +50,8 @@ public class CinematicCamera : MonoBehaviour
     public void StartCinematic()
     {
         isActivated = true;
-
+        //Paramos el movimiento del player
+        player.StopMovement();
         //Guardamos la posicion
         initialPosition = mainCamera.position;
         initialRotation = mainCamera.eulerAngles;
@@ -86,7 +84,7 @@ public class CinematicCamera : MonoBehaviour
         mainCamera.transform.DORotate(initialRotation, cameraSpeed);
         Camera.main.DOFieldOfView(initialFOV, cameraSpeed);
 
-        Invoke("FinishCamera", cameraSpeed);
+        Invoke("FinishCamera", cameraSpeed + 1.5f);
     }
     #endregion
 

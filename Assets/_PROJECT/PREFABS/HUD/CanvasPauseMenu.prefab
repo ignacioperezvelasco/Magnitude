@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverSound: Button Hover
-  PressSound: Button Sound
+  PressSound: Button Press
 --- !u!1 &699257555308777792
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverSound: Button Hover
-  PressSound: Button Sound
+  PressSound: Button Press
 --- !u!1 &3675288697056659479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverSound: Button Hover
-  PressSound: Button Sound
+  PressSound: Button Press
 --- !u!1 &6612778731258735537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverSound: Button Hover
-  PressSound: Button Sound
+  PressSound: Button Press
 --- !u!1 &7769648982384080623
 GameObject:
   m_ObjectHideFlags: 0

@@ -125,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1565312929269763269}
   - component: {fileID: 1565312929269763268}
+  - component: {fileID: 5094870745576146028}
   m_Layer: 0
   m_Name: TargetCamera
   m_TagString: Untagged
@@ -160,3 +161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedCamera: 0.3
+--- !u!81 &5094870745576146028
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565312929269763271}
+  m_Enabled: 1

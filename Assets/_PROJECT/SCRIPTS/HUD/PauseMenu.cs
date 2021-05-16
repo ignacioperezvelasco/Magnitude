@@ -16,12 +16,15 @@ public class PauseMenu : MonoBehaviour
 
     public string MainMenu = "MainMenu";
 
+    public AudioSource audioData;
+
     //REFERENCED SCRIPTS
     private LookAt _lookat;
 
     void Start()
     {
         _lookat = player.GetComponent<LookAt>();
+        audioData = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -70,5 +73,15 @@ public class PauseMenu : MonoBehaviour
     {
         //Debug.Log("QUIT GAME PAUSE MENU");
         Application.Quit();
+    }
+
+    public void HoverSound()
+    {
+        audioData.Play(0);
+    }
+
+    public void PressSound()
+    {
+        audioData.Play(1);
     }
 }

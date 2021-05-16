@@ -14,6 +14,8 @@ public class FightManager : MonoBehaviour
     [SerializeField] float timeToShowMessage = 5;
     [SerializeField] float timeDisplayingMessage = 15;
 
+    [SerializeField] Animator fadeAnimator;
+
     
     void Update()
     {
@@ -25,14 +27,13 @@ public class FightManager : MonoBehaviour
 
     void DisplayMessage()
     {
-        HUD.SetActive(false);
-        lastMessage.SetActive(true);
+        fadeAnimator.SetTrigger("Active");
 
-        Invoke("GoToMainMenu", timeDisplayingMessage);
+        Invoke("GoToLevel2", timeDisplayingMessage);
     }
 
-    void GoToMainMenu()
+    void GoToLevel2()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Level_2");
     }
 }

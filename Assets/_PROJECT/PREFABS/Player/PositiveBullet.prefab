@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PositivoCargado
       objectReference: {fileID: 0}
+    - target: {fileID: 1595252117517162, guid: e7776336bc56a9b4caa1c90ea92ff765, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4623055400575438, guid: e7776336bc56a9b4caa1c90ea92ff765, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -179,6 +183,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 108556751418608030, guid: e7776336bc56a9b4caa1c90ea92ff765, type: 3}
     - {fileID: 54917258164921374, guid: e7776336bc56a9b4caa1c90ea92ff765, type: 3}
+    - {fileID: 114847264421750224, guid: e7776336bc56a9b4caa1c90ea92ff765, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e7776336bc56a9b4caa1c90ea92ff765, type: 3}
 --- !u!4 &1444138848605058027 stripped
 Transform:

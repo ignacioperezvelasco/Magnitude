@@ -210,7 +210,6 @@ public class ImanBehavior : MonoBehaviour
                     {
                         hasToExplote = true;
                         midlePoint = (collision.collider.transform.position + this.transform.position) / 2;
-                        Debug.Log("HA entrado explsion");
                     }
                     otherCharges = collision.collider.GetComponent<ImanBehavior>().GetCharges();
                     if (imEnemy)
@@ -238,7 +237,7 @@ public class ImanBehavior : MonoBehaviour
         if (imEnemy)
         {
             //Daño a enemigo
-            myEnemyScript.GetDamage(otherCharges + numChargesAdded);
+            myEnemyScript.GetDamage((otherCharges + numChargesAdded)*7);
             Invoke("ResetObject",0.5f);
         }
         hasToExplote = false;

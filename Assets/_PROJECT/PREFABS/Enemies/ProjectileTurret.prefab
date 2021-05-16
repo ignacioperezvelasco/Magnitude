@@ -705,7 +705,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6720589741141070767}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.54277676, y: 1.3204739, z: 1}
@@ -724,6 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
+  aimHere: {fileID: 0}
   mobility: 4
   alwaysSamePole: 0
   myPole: 2
@@ -1063,7 +1064,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6720589741573401296}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4899245, y: 1.3159902, z: 1}
@@ -1082,6 +1083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
+  aimHere: {fileID: 0}
   mobility: 4
   alwaysSamePole: 0
   myPole: 2
@@ -6438,7 +6440,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6720589741889129566}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.9278259, y: 1.2503121, z: 0.43783054}
@@ -6457,6 +6459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
+  aimHere: {fileID: 0}
   mobility: 4
   alwaysSamePole: 0
   myPole: 2
@@ -6700,7 +6703,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6720589742093566068}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2927508, z: 0.44309276}
@@ -6719,6 +6722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearImantableObjects: []
   mysphereCollider: {fileID: 0}
+  aimHere: {fileID: 0}
   mobility: 4
   alwaysSamePole: 0
   myPole: 2

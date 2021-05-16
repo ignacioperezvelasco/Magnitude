@@ -134,7 +134,7 @@ public class rvMovementPers : MonoBehaviour
                 if ((myRb.velocity.magnitude > maxSpeed) && _isGrounded)
                 {
                     myRb.velocity = myRb.velocity.normalized * maxSpeed;
-                    Debug.Log("ded");
+                    //Debug.Log("ded");
                 }
             }
             

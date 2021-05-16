@@ -9663,6 +9663,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3622517249028150661, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.23
+      objectReference: {fileID: 0}
     - target: {fileID: 3622517249028150663, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -9728,6 +9733,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3622517249532212304, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622517249532212304, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622517249532212304, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3622517249532212305, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
       propertyPath: areaDamage
@@ -9758,6 +9778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: forceExplosion
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622517249532212305, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: distanceAlert
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3622517249532212307, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}

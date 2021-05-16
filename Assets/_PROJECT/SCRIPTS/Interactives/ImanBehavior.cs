@@ -227,8 +227,8 @@ public class ImanBehavior : MonoBehaviour
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                
-                rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),1,ForceMode.Force);
+                if(rb.gameObject.tag != "Player")
+                    rb.AddExplosionForce((otherCharges + numChargesAdded) * explosionForce, midlePoint, (otherCharges + numChargesAdded + 5),1,ForceMode.Force);
 
                 if (myPole==iman.POSITIVE)
                     Instantiate(explosionVFX, midlePoint, Quaternion.identity);
@@ -238,7 +238,7 @@ public class ImanBehavior : MonoBehaviour
         {
             //Daño a enemigo
             myEnemyScript.GetDamage((otherCharges + numChargesAdded)*7);
-            Invoke("ResetObject",0.5f);
+            Invoke("ResetObject",1.5f);
         }
         hasToExplote = false;
     }
@@ -364,6 +364,8 @@ public class ImanBehavior : MonoBehaviour
         {
             myPole = iman.POSITIVE;
             outline.OutlineColor = new Color32(255, 0, 0, 255);
+            Debug.Log("rojo" + outline.OutlineColor);
+
         }
         else
         {
@@ -408,7 +410,7 @@ public class ImanBehavior : MonoBehaviour
             myRB.isKinematic = true;
         }
         //OUTLINE
-        outline.OutlineColor = new Color32(0, 0, 0, 0);
+        //outline.OutlineColor = new Color32(0, 0, 0, 0);
         outline.enabled = false;
     }
 }

@@ -169,7 +169,7 @@ public class Enemy : Agent
             }
 
             //ShaderHandle
-            HandleShader();
+            //HandleShader();
         }
        
     }
@@ -557,7 +557,6 @@ public class Enemy : Agent
     public void GetDamage(float damage)
     {
         life -= (int)damage;
-        Debug.Log("Vida: " + life);
     }
 
     #endregion

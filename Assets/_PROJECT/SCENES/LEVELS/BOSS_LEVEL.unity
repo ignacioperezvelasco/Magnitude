@@ -6233,11 +6233,11 @@ MonoBehaviour:
     SpatialBlend: 0
     Loop: 0
   - Name: Music
-    Clip: {fileID: 8300000, guid: e228a1e38af461e4897bfb112ef5cf0e, type: 3}
+    Clip: {fileID: 8300000, guid: d19856cc27e424347b049ef3ec34bd1b, type: 3}
     Volume: 0.5
     Pitch: 1
     SpatialBlend: 0
-    Loop: 0
+    Loop: 1
   - Name: 
     Clip: {fileID: 0}
     Volume: 0

@@ -17,7 +17,7 @@ public class LoadNewScene : MonoBehaviour
 
             fadeAnimator.SetTrigger("Active");
 
-            Invoke("LoadScene", 3);
+            Invoke("LoadScene", 4);
         }
     }
 

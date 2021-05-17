@@ -7,20 +7,22 @@ public class countdown : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float targetTime = 5.0f;
-    void Start()
-    {
-        
-    }
+    public float targetTime = 8.0f;
+    [SerializeField] Animator fadeAnimator;
 
     // Update is called once per frame
-    void Update()
+
+
+    private void Start()
     {
-        targetTime -= Time.deltaTime;
-        if (targetTime <= 0.0f)
-        {
-            timerEnded();
-        }
+        Invoke("FadeOut", targetTime-5f);
+
+        Invoke("timerEnded", targetTime);
+    }
+
+    void FadeOut()
+    {
+        fadeAnimator.SetTrigger("Active");
     }
 
     void timerEnded()

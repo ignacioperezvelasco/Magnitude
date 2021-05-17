@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_PROJECT/SCENES/MainMenuCorrect.unity
     guid: 721d40e79b7e5e346a5e1178d0f4934f
   - enabled: 1
+    path: Assets/_PROJECT/SCENES/LEVELS/Commands.unity
+    guid: d71e7ee90d69cab439ad0d9fabd5260e
+  - enabled: 1
     path: Assets/_PROJECT/SCENES/LEVELS/LEVEL_One 1.unity
     guid: d55021f210dc8994794b3fd19d2ecca7
   - enabled: 1
@@ -17,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_PROJECT/SCENES/LEVELS/LEVEL_2/Level_2.unity
     guid: 83eeede284516a24fbe3d01203e3a376
+  - enabled: 1
+    path: Assets/_PROJECT/SCENES/LEVELS/BetaPlay.unity
+    guid: eed3c7b35a0826d4db7142c12fd22ea5
   m_configObjects: {}

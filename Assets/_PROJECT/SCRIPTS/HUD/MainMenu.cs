@@ -9,9 +9,17 @@ public class MainMenu : MonoBehaviour
 {
     public string sceneToOpen;
     public AudioSource audioData;
+    public Animator fadeAnimator;
 
     public void PlayGame()
     {
+        fadeAnimator.SetTrigger("Active");
+        Invoke("StartGame", 4);
+    }
+
+    void StartGame()
+    {
+
         PlayerPrefs.SetInt("CHECKPOINT", 0);
         //HAY QUE AÑADIR LA ESCENA AL BUILDEAR
         Debug.Log("Empecemos");

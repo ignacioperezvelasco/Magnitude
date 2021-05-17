@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public string sceneToOpen;
-    
+    public AudioSource audioData;
+
     public void PlayGame()
     {
         PlayerPrefs.SetInt("CHECKPOINT", 0);
@@ -26,5 +27,14 @@ public class MainMenu : MonoBehaviour
     void LoadNextScene()
     {
         SceneManager.LoadScene(sceneToOpen);
+    }
+    public void HoverSound()
+    {
+        audioData.Play(0);
+    }
+
+    public void PressSound()
+    {
+        audioData.Play(1);
     }
 }

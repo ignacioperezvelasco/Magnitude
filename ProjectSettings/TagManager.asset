@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Boss
   - AimingObject
+  - StopAudio
   layers:
   - Default
   - TransparentFX

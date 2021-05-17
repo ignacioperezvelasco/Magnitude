@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2049748861475453141}
   m_Layer: 0
   m_Name: STOP_AUDIOSOURCES
-  m_TagString: Untagged
+  m_TagString: StopAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

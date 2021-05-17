@@ -5889,7 +5889,7 @@ MonoBehaviour:
   myPlayerLogic: {fileID: 4265349373781901275}
   myAnimator: {fileID: 1896731843569135253}
   damage: 10
-  bulletSpeed: 15
+  bulletSpeed: 25
   Negativecharge: {fileID: 6096528498339846667, guid: b7c935c248e673d49b81bec311b263e5,
     type: 3}
   PositiveCharge: {fileID: 6096528498339846667, guid: 4122e87882452b44f89d2005c9b3adc3,

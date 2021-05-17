@@ -8,7 +8,12 @@ public class LoadNewScene : MonoBehaviour
     [SerializeField]string newScene;
     [SerializeField] Animator fadeAnimator;
 
+    StopAudioSources stopAudios;
 
+    private void Start()
+    {
+        stopAudios = GameObject.FindGameObjectWithTag("StopAudio").GetComponent<StopAudioSources>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +28,7 @@ public class LoadNewScene : MonoBehaviour
 
     void LoadScene()
     {
+        stopAudios.StopAllAudio();
         SceneManager.LoadScene(newScene);
     }
 }

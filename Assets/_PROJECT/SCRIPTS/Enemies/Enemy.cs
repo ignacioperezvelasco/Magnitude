@@ -152,8 +152,8 @@ public class Enemy : Agent
             if (!isDead)
             {
                 //Actualizamos la barra de vide
-                //healthBar.fillAmount = life / startingLife;
-                //healthTransform.transform.LookAt(Camera.main.transform);
+                healthBar.fillAmount = life / startingLife;
+                healthTransform.transform.LookAt(Camera.main.transform);
 
                 //Controlamos si debe haber cambio de estado
                 CheckState();

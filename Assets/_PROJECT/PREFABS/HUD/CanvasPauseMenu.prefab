@@ -671,7 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   pauseMenuUI: {fileID: 699257555308777792}
-  MainMenu: MainMenu
+  MainMenu: MainMenuCorrect
   audioData: {fileID: 2445591660029192042}
 --- !u!82 &2445591660029192042
 AudioSource:

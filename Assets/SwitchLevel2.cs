@@ -32,6 +32,12 @@ public class SwitchLevel2 : MonoBehaviour
     [SerializeField] GameObject leftRoomCamera;
     [SerializeField] GameObject elevatorCamera;
 
+    [Header("PART 2 ELEMENTS")]
+    [SerializeField] GameObject Floor;
+    [SerializeField] GameObject Wall;
+    [SerializeField] GameObject Props;
+
+
     bool isPlayerInside = false;
     bool isActivated = false;
 
@@ -94,6 +100,10 @@ public class SwitchLevel2 : MonoBehaviour
 
                 Invoke("ActivateCameraDoor", 1.25f);
                 Invoke("ActivateLight", 3f);
+
+                Floor.SetActive(true);
+                Wall.SetActive(true);
+                Props.SetActive(true);
             }
 
         }
@@ -159,6 +169,10 @@ public class SwitchLevel2 : MonoBehaviour
         if (type == SwitchType.DOWN)
         {
             player.ResumeMovement();
+
+            Floor.SetActive(false);
+            Wall.SetActive(false);
+            Props.SetActive(false);
         }
     }
 

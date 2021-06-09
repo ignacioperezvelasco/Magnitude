@@ -9595,6 +9595,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5163394427513343026}
     m_Modifications:
+    - target: {fileID: 518334465, guid: d79c472062d815f4a9cd110000636e47, type: 3}
+      propertyPath: m_Center.y
+      value: 0.49
+      objectReference: {fileID: 0}
     - target: {fileID: 805030102, guid: d79c472062d815f4a9cd110000636e47, type: 3}
       propertyPath: explosionVFX
       value: 
@@ -9604,9 +9608,31 @@ PrefabInstance:
       propertyPath: enemyScript
       value: 
       objectReference: {fileID: 8820225508135538109}
+    - target: {fileID: 1009951630, guid: d79c472062d815f4a9cd110000636e47, type: 3}
+      propertyPath: m_Size.y
+      value: 4.6401787
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009951630, guid: d79c472062d815f4a9cd110000636e47, type: 3}
+      propertyPath: m_Center.x
+      value: 0.3270916
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009951630, guid: d79c472062d815f4a9cd110000636e47, type: 3}
+      propertyPath: m_Center.y
+      value: 2.356751
+      objectReference: {fileID: 0}
     - target: {fileID: 1009951638, guid: d79c472062d815f4a9cd110000636e47, type: 3}
       propertyPath: m_Mass
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 916608557840635750, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916608557840635750, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 1489072425847070880, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
@@ -9788,6 +9814,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Elemental
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622517249532212318, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622517249532212318, guid: d79c472062d815f4a9cd110000636e47,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3622517249532212319, guid: d79c472062d815f4a9cd110000636e47,
         type: 3}
